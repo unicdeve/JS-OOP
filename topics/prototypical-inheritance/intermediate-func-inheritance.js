@@ -24,5 +24,13 @@ Circle.prototype.draw = function () {
 	console.log('draw');
 };
 
+// overriding the duplicate method from the Parent object
+Circle.prototype.duplicate = function () {
+	// extending the Parent's dupliacate method
+	Shape.prototype.duplicate.call(this);
+
+	console.log('dublicate circle method');
+};
+
 const s = new Shape();
 const c = new Circle();
